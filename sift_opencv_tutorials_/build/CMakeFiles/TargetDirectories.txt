@@ -1,0 +1,3 @@
+/home/xiumin/slam_ws/sift_opencv_tutorials_/build/CMakeFiles/camera_cap.dir
+/home/xiumin/slam_ws/sift_opencv_tutorials_/build/CMakeFiles/sift_camera_cap.dir
+/home/xiumin/slam_ws/sift_opencv_tutorials_/build/CMakeFiles/sift_show.dir
