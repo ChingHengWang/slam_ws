@@ -1,1 +1,0 @@
-/usr/bin/c++   -g    CMakeFiles/bfm_test.dir/src/bfm_test.cpp.o  -o ../bin/bfm_test  -L/home/zach/slam_ws/matcher_tutorials_/lib -rdynamic 

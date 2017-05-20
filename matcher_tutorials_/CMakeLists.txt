@@ -1,6 +1,7 @@
 CMAKE_MINIMUM_REQUIRED( VERSION 2.8 ) #设定版本
 project(matcher_tutorials)
-set(CMAKE_BUILD_TYPE Debug)
+set(CMAKE_BUILD_TYPE "Release")
+set(CMAKE_CXX_FLAGS "-std=c++11 -O3")
 set(${CMAKE_TOOLCHAIN_PATH} /usr/local/include)
 set( EXECUTABLE_OUTPUT_PATH ${PROJECT_SOURCE_DIR}/bin) 
 

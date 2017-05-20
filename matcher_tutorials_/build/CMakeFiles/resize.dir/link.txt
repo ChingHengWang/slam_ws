@@ -1,1 +1,0 @@
-/usr/bin/c++   -g    CMakeFiles/resize.dir/src/resize.cpp.o  -o ../bin/resize  -L/home/zach/slam_ws/matcher_tutorials_/lib -rdynamic 
