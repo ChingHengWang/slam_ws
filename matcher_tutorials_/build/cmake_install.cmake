@@ -1,4 +1,4 @@
-# Install script for directory: /home/xiumin/slam_ws/matcher_tutorials_
+# Install script for directory: /home/zach/slam_ws/matcher_tutorials_
 
 # Set the install prefix
 IF(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -38,7 +38,7 @@ ELSE(CMAKE_INSTALL_COMPONENT)
   SET(CMAKE_INSTALL_MANIFEST "install_manifest.txt")
 ENDIF(CMAKE_INSTALL_COMPONENT)
 
-FILE(WRITE "/home/xiumin/slam_ws/matcher_tutorials_/build/${CMAKE_INSTALL_MANIFEST}" "")
+FILE(WRITE "/home/zach/slam_ws/matcher_tutorials_/build/${CMAKE_INSTALL_MANIFEST}" "")
 FOREACH(file ${CMAKE_INSTALL_MANIFEST_FILES})
-  FILE(APPEND "/home/xiumin/slam_ws/matcher_tutorials_/build/${CMAKE_INSTALL_MANIFEST}" "${file}\n")
+  FILE(APPEND "/home/zach/slam_ws/matcher_tutorials_/build/${CMAKE_INSTALL_MANIFEST}" "${file}\n")
 ENDFOREACH(file)

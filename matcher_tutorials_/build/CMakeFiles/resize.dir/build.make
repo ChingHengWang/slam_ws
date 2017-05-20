@@ -34,11 +34,14 @@ RM = /usr/bin/cmake -E remove -f
 # Escaping for special characters.
 EQUALS = =
 
+# The program to use to edit the cache.
+CMAKE_EDIT_COMMAND = /usr/bin/ccmake
+
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/xiumin/slam_ws/matcher_tutorials_
+CMAKE_SOURCE_DIR = /home/zach/slam_ws/matcher_tutorials_
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/xiumin/slam_ws/matcher_tutorials_/build
+CMAKE_BINARY_DIR = /home/zach/slam_ws/matcher_tutorials_/build
 
 # Include any dependencies generated for this target.
 include CMakeFiles/resize.dir/depend.make
@@ -51,17 +54,17 @@ include CMakeFiles/resize.dir/flags.make
 
 CMakeFiles/resize.dir/src/resize.cpp.o: CMakeFiles/resize.dir/flags.make
 CMakeFiles/resize.dir/src/resize.cpp.o: ../src/resize.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/xiumin/slam_ws/matcher_tutorials_/build/CMakeFiles $(CMAKE_PROGRESS_1)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/zach/slam_ws/matcher_tutorials_/build/CMakeFiles $(CMAKE_PROGRESS_1)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/resize.dir/src/resize.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/resize.dir/src/resize.cpp.o -c /home/xiumin/slam_ws/matcher_tutorials_/src/resize.cpp
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/resize.dir/src/resize.cpp.o -c /home/zach/slam_ws/matcher_tutorials_/src/resize.cpp
 
 CMakeFiles/resize.dir/src/resize.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/resize.dir/src/resize.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/xiumin/slam_ws/matcher_tutorials_/src/resize.cpp > CMakeFiles/resize.dir/src/resize.cpp.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/zach/slam_ws/matcher_tutorials_/src/resize.cpp > CMakeFiles/resize.dir/src/resize.cpp.i
 
 CMakeFiles/resize.dir/src/resize.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/resize.dir/src/resize.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/xiumin/slam_ws/matcher_tutorials_/src/resize.cpp -o CMakeFiles/resize.dir/src/resize.cpp.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/zach/slam_ws/matcher_tutorials_/src/resize.cpp -o CMakeFiles/resize.dir/src/resize.cpp.s
 
 CMakeFiles/resize.dir/src/resize.cpp.o.requires:
 .PHONY : CMakeFiles/resize.dir/src/resize.cpp.o.requires
@@ -81,39 +84,6 @@ resize_EXTERNAL_OBJECTS =
 
 ../bin/resize: CMakeFiles/resize.dir/src/resize.cpp.o
 ../bin/resize: CMakeFiles/resize.dir/build.make
-../bin/resize: /usr/local/lib/libopencv_videostab.so.2.4.8
-../bin/resize: /usr/local/lib/libopencv_video.so.2.4.8
-../bin/resize: /usr/local/lib/libopencv_ts.a
-../bin/resize: /usr/local/lib/libopencv_superres.so.2.4.8
-../bin/resize: /usr/local/lib/libopencv_stitching.so.2.4.8
-../bin/resize: /usr/local/lib/libopencv_photo.so.2.4.8
-../bin/resize: /usr/local/lib/libopencv_ocl.so.2.4.8
-../bin/resize: /usr/local/lib/libopencv_objdetect.so.2.4.8
-../bin/resize: /usr/local/lib/libopencv_nonfree.so.2.4.8
-../bin/resize: /usr/local/lib/libopencv_ml.so.2.4.8
-../bin/resize: /usr/local/lib/libopencv_legacy.so.2.4.8
-../bin/resize: /usr/local/lib/libopencv_imgproc.so.2.4.8
-../bin/resize: /usr/local/lib/libopencv_highgui.so.2.4.8
-../bin/resize: /usr/local/lib/libopencv_gpu.so.2.4.8
-../bin/resize: /usr/local/lib/libopencv_flann.so.2.4.8
-../bin/resize: /usr/local/lib/libopencv_features2d.so.2.4.8
-../bin/resize: /usr/local/lib/libopencv_core.so.2.4.8
-../bin/resize: /usr/local/lib/libopencv_contrib.so.2.4.8
-../bin/resize: /usr/local/lib/libopencv_calib3d.so.2.4.8
-../bin/resize: /usr/local/lib/libopencv_nonfree.so.2.4.8
-../bin/resize: /usr/local/lib/libopencv_ocl.so.2.4.8
-../bin/resize: /usr/local/lib/libopencv_gpu.so.2.4.8
-../bin/resize: /usr/local/lib/libopencv_photo.so.2.4.8
-../bin/resize: /usr/local/lib/libopencv_objdetect.so.2.4.8
-../bin/resize: /usr/local/lib/libopencv_legacy.so.2.4.8
-../bin/resize: /usr/local/lib/libopencv_video.so.2.4.8
-../bin/resize: /usr/local/lib/libopencv_ml.so.2.4.8
-../bin/resize: /usr/local/lib/libopencv_calib3d.so.2.4.8
-../bin/resize: /usr/local/lib/libopencv_features2d.so.2.4.8
-../bin/resize: /usr/local/lib/libopencv_highgui.so.2.4.8
-../bin/resize: /usr/local/lib/libopencv_imgproc.so.2.4.8
-../bin/resize: /usr/local/lib/libopencv_flann.so.2.4.8
-../bin/resize: /usr/local/lib/libopencv_core.so.2.4.8
 ../bin/resize: CMakeFiles/resize.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --red --bold "Linking CXX executable ../bin/resize"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/resize.dir/link.txt --verbose=$(VERBOSE)
@@ -130,6 +100,6 @@ CMakeFiles/resize.dir/clean:
 .PHONY : CMakeFiles/resize.dir/clean
 
 CMakeFiles/resize.dir/depend:
-	cd /home/xiumin/slam_ws/matcher_tutorials_/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/xiumin/slam_ws/matcher_tutorials_ /home/xiumin/slam_ws/matcher_tutorials_ /home/xiumin/slam_ws/matcher_tutorials_/build /home/xiumin/slam_ws/matcher_tutorials_/build /home/xiumin/slam_ws/matcher_tutorials_/build/CMakeFiles/resize.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/zach/slam_ws/matcher_tutorials_/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/zach/slam_ws/matcher_tutorials_ /home/zach/slam_ws/matcher_tutorials_ /home/zach/slam_ws/matcher_tutorials_/build /home/zach/slam_ws/matcher_tutorials_/build /home/zach/slam_ws/matcher_tutorials_/build/CMakeFiles/resize.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/resize.dir/depend
 

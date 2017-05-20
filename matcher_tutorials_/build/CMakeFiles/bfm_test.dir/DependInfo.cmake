@@ -4,7 +4,7 @@ SET(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 SET(CMAKE_DEPENDS_CHECK_CXX
-  "/home/xiumin/slam_ws/matcher_tutorials_/src/bfm_test.cpp" "/home/xiumin/slam_ws/matcher_tutorials_/build/CMakeFiles/bfm_test.dir/src/bfm_test.cpp.o"
+  "/home/zach/slam_ws/matcher_tutorials_/src/bfm_test.cpp" "/home/zach/slam_ws/matcher_tutorials_/build/CMakeFiles/bfm_test.dir/src/bfm_test.cpp.o"
   )
 SET(CMAKE_CXX_COMPILER_ID "GNU")
 
@@ -14,9 +14,9 @@ SET(CMAKE_TARGET_LINKED_INFO_FILES
 
 # The include file search paths:
 SET(CMAKE_C_TARGET_INCLUDE_PATH
-  "/usr/local/include/opencv"
-  "/usr/local/include"
   "../include"
+  "/eigen3/inlcude/eigen3"
+  "/usr/local/opencv3/include/opencv/usr/local/opencv3/include"
   )
 SET(CMAKE_CXX_TARGET_INCLUDE_PATH ${CMAKE_C_TARGET_INCLUDE_PATH})
 SET(CMAKE_Fortran_TARGET_INCLUDE_PATH ${CMAKE_C_TARGET_INCLUDE_PATH})

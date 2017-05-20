@@ -38,19 +38,22 @@ RM = /usr/bin/cmake -E remove -f
 # Escaping for special characters.
 EQUALS = =
 
+# The program to use to edit the cache.
+CMAKE_EDIT_COMMAND = /usr/bin/ccmake
+
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/xiumin/slam_ws/matcher_tutorials_
+CMAKE_SOURCE_DIR = /home/zach/slam_ws/matcher_tutorials_
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/xiumin/slam_ws/matcher_tutorials_/build
+CMAKE_BINARY_DIR = /home/zach/slam_ws/matcher_tutorials_/build
 
 #=============================================================================
 # Targets provided globally by CMake.
 
 # Special rule for the target edit_cache
 edit_cache:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running interactive CMake command-line interface..."
-	/usr/bin/cmake -i .
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake cache editor..."
+	/usr/bin/ccmake -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
 .PHONY : edit_cache
 
 # Special rule for the target edit_cache
@@ -69,9 +72,9 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/xiumin/slam_ws/matcher_tutorials_/build/CMakeFiles /home/xiumin/slam_ws/matcher_tutorials_/build/CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/zach/slam_ws/matcher_tutorials_/build/CMakeFiles /home/zach/slam_ws/matcher_tutorials_/build/CMakeFiles/progress.marks
 	$(MAKE) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/xiumin/slam_ws/matcher_tutorials_/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/zach/slam_ws/matcher_tutorials_/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -99,115 +102,41 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named bfm_test
+# Target rules for targets named feature_extraction
 
 # Build rule for target.
-bfm_test: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 bfm_test
-.PHONY : bfm_test
+feature_extraction: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 feature_extraction
+.PHONY : feature_extraction
 
 # fast build rule for target.
-bfm_test/fast:
-	$(MAKE) -f CMakeFiles/bfm_test.dir/build.make CMakeFiles/bfm_test.dir/build
-.PHONY : bfm_test/fast
+feature_extraction/fast:
+	$(MAKE) -f CMakeFiles/feature_extraction.dir/build.make CMakeFiles/feature_extraction.dir/build
+.PHONY : feature_extraction/fast
 
-#=============================================================================
-# Target rules for targets named matcher_simple
-
-# Build rule for target.
-matcher_simple: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 matcher_simple
-.PHONY : matcher_simple
-
-# fast build rule for target.
-matcher_simple/fast:
-	$(MAKE) -f CMakeFiles/matcher_simple.dir/build.make CMakeFiles/matcher_simple.dir/build
-.PHONY : matcher_simple/fast
-
-#=============================================================================
-# Target rules for targets named resize
-
-# Build rule for target.
-resize: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 resize
-.PHONY : resize
-
-# fast build rule for target.
-resize/fast:
-	$(MAKE) -f CMakeFiles/resize.dir/build.make CMakeFiles/resize.dir/build
-.PHONY : resize/fast
-
-src/bfm_test.o: src/bfm_test.cpp.o
-.PHONY : src/bfm_test.o
+src/feature_extraction.o: src/feature_extraction.cpp.o
+.PHONY : src/feature_extraction.o
 
 # target to build an object file
-src/bfm_test.cpp.o:
-	$(MAKE) -f CMakeFiles/bfm_test.dir/build.make CMakeFiles/bfm_test.dir/src/bfm_test.cpp.o
-.PHONY : src/bfm_test.cpp.o
+src/feature_extraction.cpp.o:
+	$(MAKE) -f CMakeFiles/feature_extraction.dir/build.make CMakeFiles/feature_extraction.dir/src/feature_extraction.cpp.o
+.PHONY : src/feature_extraction.cpp.o
 
-src/bfm_test.i: src/bfm_test.cpp.i
-.PHONY : src/bfm_test.i
-
-# target to preprocess a source file
-src/bfm_test.cpp.i:
-	$(MAKE) -f CMakeFiles/bfm_test.dir/build.make CMakeFiles/bfm_test.dir/src/bfm_test.cpp.i
-.PHONY : src/bfm_test.cpp.i
-
-src/bfm_test.s: src/bfm_test.cpp.s
-.PHONY : src/bfm_test.s
-
-# target to generate assembly for a file
-src/bfm_test.cpp.s:
-	$(MAKE) -f CMakeFiles/bfm_test.dir/build.make CMakeFiles/bfm_test.dir/src/bfm_test.cpp.s
-.PHONY : src/bfm_test.cpp.s
-
-src/matcher_simple.o: src/matcher_simple.cpp.o
-.PHONY : src/matcher_simple.o
-
-# target to build an object file
-src/matcher_simple.cpp.o:
-	$(MAKE) -f CMakeFiles/matcher_simple.dir/build.make CMakeFiles/matcher_simple.dir/src/matcher_simple.cpp.o
-.PHONY : src/matcher_simple.cpp.o
-
-src/matcher_simple.i: src/matcher_simple.cpp.i
-.PHONY : src/matcher_simple.i
+src/feature_extraction.i: src/feature_extraction.cpp.i
+.PHONY : src/feature_extraction.i
 
 # target to preprocess a source file
-src/matcher_simple.cpp.i:
-	$(MAKE) -f CMakeFiles/matcher_simple.dir/build.make CMakeFiles/matcher_simple.dir/src/matcher_simple.cpp.i
-.PHONY : src/matcher_simple.cpp.i
+src/feature_extraction.cpp.i:
+	$(MAKE) -f CMakeFiles/feature_extraction.dir/build.make CMakeFiles/feature_extraction.dir/src/feature_extraction.cpp.i
+.PHONY : src/feature_extraction.cpp.i
 
-src/matcher_simple.s: src/matcher_simple.cpp.s
-.PHONY : src/matcher_simple.s
-
-# target to generate assembly for a file
-src/matcher_simple.cpp.s:
-	$(MAKE) -f CMakeFiles/matcher_simple.dir/build.make CMakeFiles/matcher_simple.dir/src/matcher_simple.cpp.s
-.PHONY : src/matcher_simple.cpp.s
-
-src/resize.o: src/resize.cpp.o
-.PHONY : src/resize.o
-
-# target to build an object file
-src/resize.cpp.o:
-	$(MAKE) -f CMakeFiles/resize.dir/build.make CMakeFiles/resize.dir/src/resize.cpp.o
-.PHONY : src/resize.cpp.o
-
-src/resize.i: src/resize.cpp.i
-.PHONY : src/resize.i
-
-# target to preprocess a source file
-src/resize.cpp.i:
-	$(MAKE) -f CMakeFiles/resize.dir/build.make CMakeFiles/resize.dir/src/resize.cpp.i
-.PHONY : src/resize.cpp.i
-
-src/resize.s: src/resize.cpp.s
-.PHONY : src/resize.s
+src/feature_extraction.s: src/feature_extraction.cpp.s
+.PHONY : src/feature_extraction.s
 
 # target to generate assembly for a file
-src/resize.cpp.s:
-	$(MAKE) -f CMakeFiles/resize.dir/build.make CMakeFiles/resize.dir/src/resize.cpp.s
-.PHONY : src/resize.cpp.s
+src/feature_extraction.cpp.s:
+	$(MAKE) -f CMakeFiles/feature_extraction.dir/build.make CMakeFiles/feature_extraction.dir/src/feature_extraction.cpp.s
+.PHONY : src/feature_extraction.cpp.s
 
 # Help Target
 help:
@@ -215,20 +144,12 @@ help:
 	@echo "... all (the default if no target is provided)"
 	@echo "... clean"
 	@echo "... depend"
-	@echo "... bfm_test"
 	@echo "... edit_cache"
-	@echo "... matcher_simple"
+	@echo "... feature_extraction"
 	@echo "... rebuild_cache"
-	@echo "... resize"
-	@echo "... src/bfm_test.o"
-	@echo "... src/bfm_test.i"
-	@echo "... src/bfm_test.s"
-	@echo "... src/matcher_simple.o"
-	@echo "... src/matcher_simple.i"
-	@echo "... src/matcher_simple.s"
-	@echo "... src/resize.o"
-	@echo "... src/resize.i"
-	@echo "... src/resize.s"
+	@echo "... src/feature_extraction.o"
+	@echo "... src/feature_extraction.i"
+	@echo "... src/feature_extraction.s"
 .PHONY : help
 
 

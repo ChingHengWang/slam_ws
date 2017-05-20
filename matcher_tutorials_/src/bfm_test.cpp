@@ -1,29 +1,23 @@
 #include <stdio.h>
-#include "opencv2/core/core.hpp"
-#include "opencv2/features2d/features2d.hpp"
-#include "opencv2/highgui/highgui.hpp"
-#include "opencv2/nonfree/nonfree.hpp"
+#include <opencv2/core/core.hpp>
+#include <opencv2/features2d/features2d.hpp>
+#include <opencv2/highgui/highgui.hpp>
+#include <opencv2/nonfree/nonfree.hpp> //not suuport opencv3
 
+using namespace std;
 using namespace cv;
-
-static void help()
-{
-    printf("\nThis program demonstrates using features2d detector, descriptor extractor and simple matcher\n"
-            "Using the SURF desriptor:\n"
-            "\n"
-            "Usage:\n matcher_simple <image1> <image2>\n");
-}
 
 int main(int argc, char** argv)
 {
     if(argc != 3)
     {
-        help();
+        printf("Usage:\n feature_extraction <image1> <image2>\n");
         return -1;
     }
 
     Mat img1 = imread(argv[1], CV_LOAD_IMAGE_GRAYSCALE);
     Mat img2 = imread(argv[2], CV_LOAD_IMAGE_GRAYSCALE);
+
     if(img1.empty() || img2.empty())
     {
         printf("Can't read one of the images\n");
@@ -53,6 +47,20 @@ int main(int argc, char** argv)
     drawMatches(img1, keypoints1, img2, keypoints2, matches, img_matches);
     imshow("matches", img_matches);
     waitKey(0);
+
+/*
+    //-- 初始化
+    std::vector<KeyPoint> keypoints_1, keypoints_2;
+    Mat descriptors_1, descriptors_2;
+    Ptr<FeatureDetector> detector = ORB::create();
+    Ptr<DescriptorExtractor> descriptor = ORB::create();
+*/
+
+
+
+
+
+
 
     return 0;
 }
